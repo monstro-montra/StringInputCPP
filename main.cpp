@@ -4,8 +4,8 @@
 using namespace std;
 
 struct input{
-    const static int SIZE = 3;
-    string inputs[SIZE];
+    const int SIZE = 3;
+    string inputs[3];
 };
 
 struct input inputStrings(){
@@ -24,21 +24,21 @@ struct input inputStrings(){
          cout << "String # " << i << ": " << arr[i] << endl;
      }
 }
+//void reverseString(string& str){
+//    int n = str.length();
+//
+//    for (int i = 0; i < n / 2; i++){ //start at 0, i < string length / 2, increment i by 1 each loop
+//        swap(str[i], str[n - i - 1]); // swap string[i] with str @ string length - i - 1
+//    }
+//}
 
-void reverseString(string& str){
-    int n = str.length();
-
-    for (int i = 0; i < n / 2; i++){ //start at 0, i < string length / 2, increment i by 1 each loop
-        swap(str[i], str[n - i - 1]); // swap string[i] with str @ string length - i - 1
-    }
-}
 
 int main() {
     struct input s = inputStrings();
     printArray(s.inputs);
 
     for (int i = 0; i < s.SIZE; i++){
-        reverseString(s.inputs[i]);
+        std::reverse(s.inputs[i].begin(), s.inputs[i].end());
     }
     printArray(s.inputs);
 

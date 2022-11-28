@@ -3,4 +3,4 @@ project(StringInputCPP)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(StringInputCPP main.cpp)
+add_executable(StringInputCPP main.cpp test.cpp)
